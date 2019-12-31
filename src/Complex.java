@@ -160,12 +160,102 @@ public class Complex
 		return new Complex(Math.cos(arc) * rad, Math.sin(arc) * rad);
 	}
 	
+	public static Complex toRectangular(double rad, float arc)
+	{
+		return toRectangular(rad, (double)arc);
+	}
+	
+	public static Complex toRectangular(double rad, int arc)
+	{
+		return toRectangular(rad, (double)arc);
+	}
+	
+	public static Complex toRectangular(double rad, long arc)
+	{
+		return toRectangular(rad, (double)arc);
+	}
+	
+	public static Complex toRectangular(float rad, double arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(float rad, float arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(float rad, int arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(float rad, long arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(int rad, double arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(int rad, float arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(int rad, int arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(int rad, long arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(long rad, double arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(long rad, float arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(long rad, int arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
+	public static Complex toRectangular(long rad, long arc)
+	{
+		return toRectangular((double)rad, arc);
+	}
+	
 	public Complex plus(Complex zeta)
 	{
 		return new Complex(re + zeta.re, im + zeta.im);
 	}
 	
 	public Complex plus(double a)
+	{
+		return this.plus(new Complex(a));
+	}
+	
+	public Complex plus(float a)
+	{
+		return this.plus(new Complex(a));
+	}
+	
+	public Complex plus(int a)
+	{
+		return this.plus(new Complex(a));
+	}
+	
+	public Complex plus(long a)
 	{
 		return this.plus(new Complex(a));
 	}
@@ -180,6 +270,21 @@ public class Complex
 		return this.minus(new Complex(a));
 	}
 	
+	public Complex minus(float a)
+	{
+		return this.minus(new Complex(a));
+	}
+	
+	public Complex minus(int a)
+	{
+		return this.minus(new Complex(a));
+	}
+	
+	public Complex minus(long a)
+	{
+		return this.minus(new Complex(a));
+	}
+	
 	public Complex times(Complex zeta)
 	{
 		return toRectangular(rad * zeta.rad, arc + zeta.arc);
@@ -190,12 +295,42 @@ public class Complex
 		return this.times(new Complex(a));
 	}
 	
+	public Complex times(float a)
+	{
+		return this.times(new Complex(a));
+	}
+	
+	public Complex times(int a)
+	{
+		return this.times(new Complex(a));
+	}
+	
+	public Complex times(long a)
+	{
+		return this.times(new Complex(a));
+	}
+	
 	public Complex dividedBy(Complex zeta)
 	{
 		return toRectangular(rad / zeta.rad, arc - zeta.arc);
 	}
 	
 	public Complex dividedBy(double a)
+	{
+		return this.dividedBy(new Complex(a));
+	}
+	
+	public Complex dividedBy(float a)
+	{
+		return this.dividedBy(new Complex(a));
+	}
+	
+	public Complex dividedBy(int a)
+	{
+		return this.dividedBy(new Complex(a));
+	}
+	
+	public Complex dividedBy(long a)
 	{
 		return this.dividedBy(new Complex(a));
 	}
