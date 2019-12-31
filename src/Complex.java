@@ -1,3 +1,4 @@
+import javax.print.DocFlavor;
 import java.lang.Math;
 
 public class Complex
@@ -440,6 +441,21 @@ public class Complex
 		return Math.abs(a);
 	}
 	
+	public static float abs(float a)
+	{
+		return Math.abs(a);
+	}
+	
+	public static int abs(int a)
+	{
+		return Math.abs(a);
+	}
+	
+	public static long abs(long a)
+	{
+		return Math.abs(a);
+	}
+	
 	public static double abs(Complex a)
 	{
 		return (a.rad);
@@ -453,6 +469,16 @@ public class Complex
 	public static Complex acos(Complex a)
 	{
 		return new Complex();
+	}
+	
+	public static int addExact(int x, int y)
+	{
+		return Math.addExact(x, y);
+	}
+	
+	public static long addExact(long x, long y)
+	{
+		return Math.addExact(x, y);
 	}
 	
 	public static Complex asin(double a)
@@ -475,9 +501,9 @@ public class Complex
 		return new Complex();
 	}
 	
-	public static double atan2(double a, double b)
+	public static double atan2(double x, double y)
 	{
-		return Math.atan2(a, b);
+		return Math.atan2(x, y);
 	}
 	
 	public static double cbrt(double a)
@@ -490,6 +516,46 @@ public class Complex
 		return pow(a, 1 / 3);
 	}
 	
+	public static double ceil(double a)
+	{
+		return Math.ceil(a);
+	}
+	
+	public static double copySign(double magnitude, double sign)
+	{
+		return Math.copySign(magnitude, sign);
+	}
+	
+	public static Complex copySign(double magnitude, Complex sign)
+	{
+		return toRectangular(magnitude,sign.arc);
+	}
+	
+	public static Complex copySign(Complex magnitude, double sign)
+	{
+		return toRectangular(magnitude.rad,new Complex(sign).arc);
+	}
+	
+	public static Complex copySign(Complex magnitude, Complex sign)
+	{
+		return toRectangular(magnitude.rad, sign.arc);
+	}
+	
+	public static float copySign(float magnitude, float sign)
+	{
+		return Math.copySign(magnitude, sign);
+	}
+	
+	public static Complex copySign(float magnitude, Complex sign)
+	{
+		return toRectangular(magnitude, sign.arc);
+	}
+	
+	public static Complex copySign(Complex magnitude, float sign)
+	{
+		return toRectangular(magnitude.rad, new Complex(sign).arc);
+	}
+	
 	public static double cos(double a)
 	{
 		return Math.cos(a);
@@ -500,9 +566,9 @@ public class Complex
 		return new Complex();
 	}
 	
-	public static double cosh(double a)
+	public static double cosh(double x)
 	{
-		return Math.cosh(a);
+		return Math.cosh(x);
 	}
 	
 	public static Complex cosh(Complex x)
@@ -520,14 +586,69 @@ public class Complex
 		return pow(a, Math.E);
 	}
 	
-	public static double expm1(double a)
+	public static double expm1(double x)
 	{
-		return Math.expm1(a);
+		return Math.expm1(x);
 	}
 	
 	public static Complex expm1(Complex x)
 	{
 		return pow(x, Math.E).minus(1);
+	}
+	
+	public static double floor(double a)
+	{
+		return Math.floor(a);
+	}
+	
+	public static int floorDiv(int x, int y)
+	{
+		return Math.floorDiv(x, y);
+	}
+	
+	public static long floorDiv(long x, long y)
+	{
+		return Math.floorDiv(x, y);
+	}
+	
+	public static int floorMod(int x, int y)
+	{
+		return Math.floorMod(x, y);
+	}
+	
+	public static long floorMod(long x, long y)
+	{
+		return Math.floorMod(x, y);
+	}
+	
+	public static int getExponent(double d)
+	{
+		return Math.getExponent(d);
+	}
+	
+	public static int getExponent(float f)
+	{
+		return Math.getExponent(f);
+	}
+	
+	public static double hypot(double x, double y)
+	{
+		return Math.hypot(x, y);
+	}
+	
+	public static double IEEEremainder(double f1, double f2)
+	{
+		return Math.IEEEremainder(f1, f2);
+	}
+	
+	public static int incrementExact(int a)
+	{
+		return Math.incrementExact(a);
+	}
+	
+	public static long incrementExact(long a)
+	{
+		return Math.incrementExact(a);
 	}
 	
 	public static Complex log(Complex a)
@@ -550,14 +671,104 @@ public class Complex
 		return logBase(a, 10);
 	}
 	
-	public static Complex log1p(Complex a)
+	public static Complex log1p(Complex x)
 	{
-		return logBase(a.plus(1), Math.E);
+		return logBase(x.plus(1), Math.E);
 	}
 	
-	public static Complex log1p(double a)
+	public static Complex log1p(double x)
 	{
-		return logBase(a + 1, Math.E);
+		return logBase(x + 1, Math.E);
+	}
+	
+	public static double max(double a, double b)
+	{
+		return Math.max(a, b);
+	}
+	
+	public static float max(float a, float b)
+	{
+		return Math.max(a, b);
+	}
+	
+	public static int max(int a, int b)
+	{
+		return Math.max(a, b);
+	}
+	
+	public static long max(long a, long b)
+	{
+		return Math.max(a, b);
+	}
+	
+	public static double min(double a, double b)
+	{
+		return Math.min(a, b);
+	}
+	
+	public static float min(float a, float b)
+	{
+		return Math.min(a, b);
+	}
+	
+	public static int min(int a, int b)
+	{
+		return Math.min(a, b);
+	}
+	
+	public static long min(long a, long b)
+	{
+		return Math.min(a, b);
+	}
+	
+	public static int multiplyExact(int x, int y)
+	{
+		return Math.multiplyExact(x, y);
+	}
+	
+	public static long multiplyExact(long x, long y)
+	{
+		return Math.multiplyExact(x, y);
+	}
+	
+	public static int negateExact(int a)
+	{
+		return Math.negateExact(a);
+	}
+	
+	public static long negateExact(long a)
+	{
+		return Math.negateExact(a);
+	}
+	
+	public static double nextAfter(double start, double direction)
+	{
+		return Math.nextAfter(start, direction);
+	}
+	
+	public static float nextAfter(float start, float direction)
+	{
+		return Math.nextAfter(start, direction);
+	}
+	
+	public static double nextDown(double d)
+	{
+		return Math.nextDown(d);
+	}
+	
+	public static float nextDown(float f)
+	{
+		return Math.nextDown(f);
+	}
+	
+	public static double nextUp(double d)
+	{
+		return Math.nextUp(d);
+	}
+	
+	public static float nextUp(float f)
+	{
+		return Math.nextUp(f);
 	}
 	
 	public static Complex pow(Complex a, Complex b)
@@ -582,14 +793,44 @@ public class Complex
 		return pow(new Complex(a),new Complex(b));
 	}
 	
+	public static double random()
+	{
+		return Math.random();
+	}
+	
+	public static double rint(double a)
+	{
+		return Math.rint(a);
+	}
+	
+	public static long round(double a)
+	{
+		return Math.round(a);
+	}
+	
+	public static int round(float a)
+	{
+		return Math.round(a);
+	}
+	
+	public static double scalb(double d, int scaleFactor)
+	{
+		return Math.scalb(d, scaleFactor);
+	}
+	
+	public static float scalb(float f, int scaleFactor)
+	{
+		return Math.scalb(f, scaleFactor);
+	}
+	
 	public static Complex signum(Complex c)
 	{
 		return c.dividedBy(c.rad);
 	}
 	
-	public static double signum(double c)
+	public static double signum(double d)
 	{
-		return Math.signum(c);
+		return Math.signum(d);
 	}
 	
 	public static double sin(double a)
@@ -602,9 +843,9 @@ public class Complex
 		return new Complex();
 	}
 	
-	public static double sinh(double a)
+	public static double sinh(double x)
 	{
-		return Math.sinh(a);
+		return Math.sinh(x);
 	}
 	
 	public static Complex sinh(Complex x)
@@ -632,9 +873,9 @@ public class Complex
 		return new Complex();
 	}
 	
-	public static double tanh(double a)
+	public static double tanh(double x)
 	{
-		return Math.tanh(a);
+		return Math.tanh(x);
 	}
 	
 	public static Complex tanh(Complex x)
@@ -642,4 +883,28 @@ public class Complex
 		return new Complex();
 	}
 	
+	public static double toDegrees(double angrad)
+	{
+		return Math.toDegrees(angrad);
+	}
+	
+	public static int toIntExact(long value)
+	{
+		return Math.toIntExact(value);
+	}
+	
+	public static double toRadians(double angdeg)
+	{
+		return Math.toRadians(angdeg);
+	}
+	
+	public static double ulp(double d)
+	{
+		return Math.ulp(d);
+	}
+	
+	public static float ulp(float f)
+	{
+		return Math.ulp(f);
+	}
 }
