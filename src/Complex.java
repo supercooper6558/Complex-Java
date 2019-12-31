@@ -40,11 +40,120 @@ public class Complex
 		im = 0;
 	}
 	
+	public Complex(float x)
+	{
+		re = (double)x;
+	}
+	
+	public Complex(int x)
+	{
+		re = (double)x;
+	}
+	
+	public Complex(long x)
+	{
+		re = (double)x;
+	}
+	
 	public Complex(double x, double y)
 	{
 		re = x;
 		im = y;
 	}
+	
+	public Complex(double x, float y)
+	{
+		re = x;
+		im = (double)y;
+	}
+	
+	public Complex(double x, int y)
+	{
+		re = x;
+		im = (double)y;
+	}
+	
+	public Complex(double x, long y)
+	{
+		re = x;
+		im = (double)y;
+	}
+	
+	public Complex(float x, double y)
+	{
+		re = (double)x;
+		im = y;
+	}
+	
+	public Complex(float x, float y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(float x, int y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(float x, long y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(int x, double y)
+	{
+		re = (double)x;
+		im = y;
+	}
+	
+	public Complex(int x, float y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(int x, int y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(int x, long y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(long x, double y)
+	{
+		re = (double)x;
+		im = y;
+	}
+	
+	public Complex(long x, float y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(long x, int y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public Complex(long x, long y)
+	{
+		re = (double)x;
+		im = (double)y;
+	}
+	
+	public static double E = Math.E;
+	
+	public static double PI = Math.PI;
 	
 	public static Complex toRectangular(double rad, double arc)
 	{
@@ -156,6 +265,21 @@ public class Complex
 		return a.dividedBy(b);
 	}
 	
+	public static Complex divide(Complex a, double b)
+	{
+		return a.dividedBy(new Complex(b));
+	}
+	
+	public static Complex divide(double a, Complex b)
+	{
+		return new Complex(a).dividedBy(b);
+	}
+	
+	public static Complex divide(double a, double b)
+	{
+		return new Complex(a).dividedBy(new Complex(b));
+	}
+	
 	public static Complex logBase(Complex a, Complex b)
 	{
 		return new Complex();
@@ -176,6 +300,11 @@ public class Complex
 		return logBase(new Complex(a), new Complex(b));
 	}
 	
+	public static double abs(double a)
+	{
+		return Math.abs(a);
+	}
+	
 	public static double abs(Complex a)
 	{
 		return (a.rad);
@@ -183,7 +312,7 @@ public class Complex
 	
 	public static Complex acos(double a)
 	{
-		return new Complex();
+		return acos(new Complex(a));
 	}
 	
 	public static Complex acos(Complex a)
@@ -193,7 +322,7 @@ public class Complex
 	
 	public static Complex asin(double a)
 	{
-		return new Complex();
+		return asin(new Complex(a));
 	}
 	
 	public static Complex asin(Complex a)
@@ -201,9 +330,24 @@ public class Complex
 		return new Complex();
 	}
 	
+	public static double atan(double a)
+	{
+		return Math.atan(a);
+	}
+	
 	public static Complex atan(Complex a)
 	{
 		return new Complex();
+	}
+	
+	public static double atan2(double a, double b)
+	{
+		return Math.atan2(a, b);
+	}
+	
+	public static double cbrt(double a)
+	{
+		return Math.cbrt(a);
 	}
 	
 	public static Complex cbrt(Complex a)
@@ -211,9 +355,19 @@ public class Complex
 		return pow(a, 1 / 3);
 	}
 	
+	public static double cos(double a)
+	{
+		return Math.cos(a);
+	}
+	
 	public static Complex cos(Complex a)
 	{
 		return new Complex();
+	}
+	
+	public static double cosh(double a)
+	{
+		return Math.cosh(a);
 	}
 	
 	public static Complex cosh(Complex x)
@@ -221,9 +375,19 @@ public class Complex
 		return new Complex();
 	}
 	
+	public static double exp(double a)
+	{
+		return Math.exp(a);
+	}
+	
 	public static Complex exp(Complex a)
 	{
 		return pow(a, Math.E);
+	}
+	
+	public static double expm1(double a)
+	{
+		return Math.expm1(a);
 	}
 	
 	public static Complex expm1(Complex x)
@@ -280,7 +444,7 @@ public class Complex
 	
 	public static Complex pow(double a, double b)
 	{
-		return new Complex(Math.pow(a, b));
+		return pow(new Complex(a),new Complex(b));
 	}
 	
 	public static Complex signum(Complex c)
@@ -288,9 +452,24 @@ public class Complex
 		return c.dividedBy(c.rad);
 	}
 	
+	public static double signum(double c)
+	{
+		return Math.signum(c);
+	}
+	
+	public static double sin(double a)
+	{
+		return Math.sin(a);
+	}
+	
 	public static Complex sin(Complex a)
 	{
 		return new Complex();
+	}
+	
+	public static double sinh(double a)
+	{
+		return Math.sinh(a);
 	}
 	
 	public static Complex sinh(Complex x)
@@ -308,13 +487,24 @@ public class Complex
 		return pow(a, 1 / 2);
 	}
 	
+	public static double tan(double a)
+	{
+		return Math.tan(a);
+	}
+	
 	public static Complex tan(Complex a)
 	{
 		return new Complex();
+	}
+	
+	public static double tanh(double a)
+	{
+		return Math.tanh(a);
 	}
 	
 	public static Complex tanh(Complex x)
 	{
 		return new Complex();
 	}
+	
 }
